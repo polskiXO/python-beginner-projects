@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "natlang2latex"
+version = "0.1.0"
+description = "Use GenerativeAI API to convert natural language to latex."
+authors = ["menamerai", "polskiXO"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-generativeai = "^0.4.1"
+streamlit = "^1.32.2"
+python-dotenv = "^1.0.1"
+pytest = "^8.1.1"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
