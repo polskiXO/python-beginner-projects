@@ -20,5 +20,5 @@ poetry run pre-commit install
 Run tests with
 
 ```terminal
-pytest
+pytest projects/NatLang2Latex
 ```
