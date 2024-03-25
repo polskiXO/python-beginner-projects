@@ -24,7 +24,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 natlang2latex_logo = Image.open("resources/NatLang2Latex_logo2_DallE.png")
 st.image(natlang2latex_logo)
 
-# Container
 # Title
 st.title("Natural Language to LaTeX")
 st.write("This is a simple web app that converts natural language to LaTeX.")
@@ -50,7 +49,8 @@ st.sidebar.header("About")
 st.sidebar.markdown(
     """
     A project by [polskiXO](https://github.com/polskiXO) and [menamerai](https://github.com/menamerai) for EECE3092.
-    This is a natural language to LaTex converter made using google Gemini API and applied Software Engineering Technique from EECE3092.    
+    
+    NatLang2Latex is made using Google Gemini API to convert natural language to LaTeX and hosted on Streamlit. 
     """
 )
 
