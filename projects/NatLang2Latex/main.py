@@ -1,5 +1,10 @@
 import os, streamlit as st
 from PIL import Image
+from backend import NatLang2Latext
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 
 # Streamlit page background
@@ -32,6 +37,8 @@ st.write("This is a simple web app that converts natural language to LaTeX.")
 st.header("Input")
 input_text = st.text_area("Enter your mathematical natural language expression:")
 
+converter = NatLang2Latext(google_api_key=os.getenv("GOOGLE_API_KEY")) 
+
 # Output
 if st.button("Convert to LaTeX"):
     # Validate inputs
@@ -40,7 +47,9 @@ if st.button("Convert to LaTeX"):
     else:
         st.header("Output")
         st.write("This is the LaTeX representation of your expression:")
-        # TODO: Add the conversion logic here
+        nat_lang = input_text.strip()
+        latex = converter.convert(nat_lang)
+        st.write(f"`{latex}`") # Display LaTeX in code block
 
 
 # =========================================================================================================
