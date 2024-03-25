@@ -37,7 +37,7 @@ st.write("This is a simple web app that converts natural language to LaTeX.")
 st.header("Input")
 input_text = st.text_area("Enter your mathematical natural language expression:")
 
-converter = NatLang2Latext(google_api_key=os.getenv("GOOGLE_API_KEY")) 
+converter = NatLang2Latext(google_api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Output
 if st.button("Convert to LaTeX"):
@@ -49,7 +49,7 @@ if st.button("Convert to LaTeX"):
         st.write("This is the LaTeX representation of your expression:")
         nat_lang = input_text.strip()
         latex = converter.convert(nat_lang)
-        st.write(f"`{latex}`") # Display LaTeX in code block
+        st.write(f"`{latex}`")  # Display LaTeX in code block
 
 
 # =========================================================================================================
