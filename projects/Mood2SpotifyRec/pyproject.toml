@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mood2spotifyrec"
+version = "0.1.0"
+description = "Quick app to use the user's mood input as generation data to a Spotify playlist."
+authors = ["menamerai <rphananh@gmail.com>", "polskiXO <tran2tp@mail.uc.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.32.2"
+google-generativeai = "^0.4.1"
+requests = "^2.31.0"
+pytest = "^8.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
