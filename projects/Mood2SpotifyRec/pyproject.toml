@@ -5,6 +5,8 @@ description = "Quick app to use the user's mood input as generation data to a Sp
 authors = ["menamerai <rphananh@gmail.com>", "polskiXO <tran2tp@mail.uc.edu>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -13,6 +15,7 @@ google-generativeai = "^0.4.1"
 requests = "^2.31.0"
 pytest = "^8.1.1"
 spotipy = "^2.23.0"
+python-dotenv = "^1.0.1"
 
 
 [build-system]
