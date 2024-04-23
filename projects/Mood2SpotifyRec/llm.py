@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 
-class NatLang2Latext:
+class Mood2SpotifyRec:
     def __init__(
         self, google_api_key: str | None = None, model_name: str = "gemini-pro"
     ):
@@ -55,7 +55,7 @@ class NatLang2Latext:
         genai.configure(api_key=self.google_api_key)
         model = genai.GenerativeModel(model_name=self.model_name)
         prompt = f"<MOOD>{self.prompt}{text}</MOOD>\n<METRICS>\n"
-        raw_ouput = model.generate_content(
+        raw_output = model.generate_content(
             contents=prompt,
             generation_config=genai.types.GenerationConfig(
                 candidate_count=1,
@@ -64,11 +64,23 @@ class NatLang2Latext:
                 stop_sequences=["</METRICS>"],
             ),
         ).text
-
+        # metrics = {}
+        # for line in raw_ouput.split("\n"):
+        #     if ":" in line:
+        #         key, value = line.split(":")
+        #         metrics[key.strip()] = float(value.strip())
+        # return metrics
         metrics = {}
-        for line in raw_ouput.split("\n"):
+        for line in raw_output.split("\n"):
             if ":" in line:
                 key, value = line.split(":")
-                metrics[key.strip()] = float(value.strip())
+                range_values = value.strip().split("-")
+                if len(range_values) == 2:
+                    # Calculate the average of the range values
+                    float_values = [float(x) for x in range_values]
+                    metrics[key.strip()] = sum(float_values) / len(float_values)
+                else:
+                    # If there's only one value, convert it directly
+                    metrics[key.strip()] = float(value.strip())
 
         return metrics

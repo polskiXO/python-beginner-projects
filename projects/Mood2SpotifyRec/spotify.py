@@ -114,7 +114,6 @@ class SpotifyTools:
         )
         return recommended_tracks
 
-    # TODO: remove when done
     def get_test_track_recommendation(self):
         testSeedData = SeedData.SeedData().get_test_seed_data()
         return self.get_tracks_recommendations(testSeedData)
