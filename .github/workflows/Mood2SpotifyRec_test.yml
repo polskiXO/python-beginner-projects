@@ -24,4 +24,4 @@ jobs:
                   pip install pytest-cov
             - name: Test with pytest
               run: |
-                  pytest projects/NatLang2Latex -v -s
+                  pytest projects/Mood2SpotifyRec -v -s
