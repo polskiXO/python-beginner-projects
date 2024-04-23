@@ -918,25 +918,25 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/menamerai">
+            <img src="https://avatars.githubusercontent.com/u/62800649?v=4" width="100;" alt="menamerai"/>
+            <br />
+            <sub><b>Rai</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/bim22614">
             <img src="https://avatars.githubusercontent.com/u/64481896?v=4" width="100;" alt="bim22614"/>
             <br />
             <sub><b>Bim22614</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/payallenka">
             <img src="https://avatars.githubusercontent.com/u/83643171?v=4" width="100;" alt="payallenka"/>
             <br />
             <sub><b>Payallenka</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/menamerai">
-            <img src="https://avatars.githubusercontent.com/u/62800649?v=4" width="100;" alt="menamerai"/>
-            <br />
-            <sub><b>Rai</b></sub>
         </a>
     </td>
     <td align="center">
